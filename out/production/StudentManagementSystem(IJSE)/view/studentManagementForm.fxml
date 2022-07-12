@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="studentContext" prefHeight="750.0" prefWidth="806.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentManagementFormController">
+   <children>
+      <Label layoutX="15.0" layoutY="14.0" prefHeight="44.0" prefWidth="112.0" text="IJSE" textFill="#d63031">
+         <font>
+            <Font name="Candara Bold" size="51.0" />
+         </font>
+      </Label>
+      <Label layoutX="422.0" layoutY="20.0" prefHeight="61.0" prefWidth="372.0" text="Student Management System" textFill="#d63031">
+         <font>
+            <Font name="Candara" size="29.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d63031" height="4.0" layoutX="14.0" layoutY="73.0" stroke="#d63031" strokeType="INSIDE" width="777.0" />
+      <TextField fx:id="txtStudentId" layoutX="50.0" layoutY="119.0" onAction="#txtSearchOnAction" prefHeight="16.0" prefWidth="296.0" style="-fx-background-color: white; -fx-background-radius: 8; -fx-border-color: black; -fx-border-radius: 8; -fx-border-width: 2;">
+         <font>
+            <Font name="Candara" size="19.0" />
+         </font>
+      </TextField>
+      <Label layoutX="62.0" layoutY="109.0" style="-fx-background-color: white;" text="Student Id">
+         <font>
+            <Font name="Candara Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtName" layoutX="460.0" layoutY="119.0" prefHeight="16.0" prefWidth="296.0" style="-fx-background-color: white; -fx-background-radius: 8; -fx-border-color: black; -fx-border-radius: 8; -fx-border-width: 2;">
+         <font>
+            <Font name="Candara" size="19.0" />
+         </font>
+      </TextField>
+      <Label layoutX="472.0" layoutY="109.0" style="-fx-background-color: white;" text="Student Name">
+         <font>
+            <Font name="Candara Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEmail" layoutX="50.0" layoutY="194.0" prefHeight="16.0" prefWidth="296.0" style="-fx-background-color: white; -fx-background-radius: 8; -fx-border-color: black; -fx-border-radius: 8; -fx-border-width: 2;">
+         <font>
+            <Font name="Candara" size="19.0" />
+         </font>
+      </TextField>
+      <Label layoutX="62.0" layoutY="184.0" style="-fx-background-color: white;" text="Email">
+         <font>
+            <Font name="Candara Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtContact" layoutX="460.0" layoutY="194.0" prefHeight="16.0" prefWidth="296.0" style="-fx-background-color: white; -fx-background-radius: 8; -fx-border-color: black; -fx-border-radius: 8; -fx-border-width: 2;">
+         <font>
+            <Font name="Candara" size="19.0" />
+         </font>
+      </TextField>
+      <Label layoutX="472.0" layoutY="184.0" style="-fx-background-color: white;" text="Contact">
+         <font>
+            <Font name="Candara Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAddress" layoutX="50.0" layoutY="273.0" prefHeight="40.0" prefWidth="706.0" style="-fx-background-color: white; -fx-background-radius: 8; -fx-border-color: black; -fx-border-radius: 8; -fx-border-width: 2;">
+         <font>
+            <Font name="Candara" size="19.0" />
+         </font>
+      </TextField>
+      <Label layoutX="62.0" layoutY="263.0" style="-fx-background-color: white;" text="Address">
+         <font>
+            <Font name="Candara Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNic" layoutX="50.0" layoutY="348.0" prefHeight="16.0" prefWidth="296.0" style="-fx-background-color: white; -fx-background-radius: 8; -fx-border-color: black; -fx-border-radius: 8; -fx-border-width: 2;">
+         <font>
+            <Font name="Candara" size="19.0" />
+         </font>
+      </TextField>
+      <Label layoutX="62.0" layoutY="338.0" style="-fx-background-color: white;" text="NIC">
+         <font>
+            <Font name="Candara Bold" size="19.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblStudent" layoutX="14.0" layoutY="500.0" prefHeight="230.0" prefWidth="777.0">
+        <columns>
+          <TableColumn fx:id="colStId" prefWidth="85.0" text="Student Id" />
+            <TableColumn fx:id="colStName" prefWidth="117.0" text="Student Name" />
+            <TableColumn fx:id="colEmail" prefWidth="175.0" text="Email" />
+            <TableColumn fx:id="colContact" prefWidth="119.0" text="Contact" />
+            <TableColumn fx:id="colAddress" prefWidth="154.0" text="Address" />
+            <TableColumn fx:id="colNic" prefWidth="125.0" text="NIC" />
+        </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="144.0" layoutY="419.0" onAction="#saveOnAction" prefHeight="36.0" prefWidth="127.0" style="-fx-background-color: #38ada9; -fx-background-radius: 6; -fx-border-radius: 6;" text="Save">
+         <font>
+            <Font name="Candara Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="339.0" layoutY="419.0" onAction="#updateOnAction" prefHeight="36.0" prefWidth="127.0" style="-fx-background-color: #4a69bd; -fx-background-radius: 6; -fx-border-radius: 6;" text="Update">
+         <font>
+            <Font name="Candara Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="535.0" layoutY="419.0" onAction="#deleteOnAction" prefHeight="36.0" prefWidth="127.0" style="-fx-background-color: #d63031; -fx-background-radius: 6; -fx-border-radius: 6;" text="Delete">
+         <font>
+            <Font name="Candara Bold" size="19.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

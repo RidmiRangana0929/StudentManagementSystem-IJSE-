@@ -79,11 +79,11 @@ public class StudentManagementFormController {
             e.printStackTrace();
         }
         if(result.next()){
-            txtName.setText(result.getString(1));
-            txtEmail.setText(result.getString(2));
-            txtContact.setText(result.getString(3));
-            txtAddress.setText(result.getString(4));
+            txtName.setText(result.getString(2));
+            txtEmail.setText(result.getString(3));
+            txtContact.setText(result.getString(4));
             txtAddress.setText(result.getString(5));
+            txtNic.setText(result.getString(6));
         }
 
     }
